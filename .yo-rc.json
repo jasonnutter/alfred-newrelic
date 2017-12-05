@@ -1,0 +1,8 @@
+{
+  "generator-alfred": {
+    "promptValues": {
+      "githubUsername": "jasonnutter",
+      "website": "https://github.com/jasonnutter/alfred-newrelic"
+    }
+  }
+}
