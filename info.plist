@@ -130,7 +130,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>nraccountid</string>
+				<string>nr_id</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -174,7 +174,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>nrapikey</string>
+				<string>nr_api</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
