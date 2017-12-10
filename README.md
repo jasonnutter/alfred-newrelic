@@ -1,6 +1,6 @@
 # alfred-newrelic [![Build Status](https://travis-ci.org/jasonnutter/alfred-newrelic.svg?branch=master)](https://travis-ci.org/jasonnutter/alfred-newrelic)
 
-> Alfred workflow for opening New Relic apps
+> Alfred workflow for opening New Relic apps.
 
 
 ## Install
@@ -9,7 +9,7 @@
 $ npm install --global alfred-newrelic
 ```
 
-*Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
+*Requires [Node.js](https://nodejs.org) 6+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
 
 
 ## Usage
