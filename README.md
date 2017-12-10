@@ -14,8 +14,24 @@ $ npm install --global alfred-newrelic
 
 ## Usage
 
-In Alfred, type `nr`, <kbd>Enter</kbd>, and your query.
+### Set Account ID
 
+Provide the ID of your New Relic account, e.g. `https://rpm.newrelic.com/accounts/######/`
+
+Command:
+`nr_id ######`
+
+### Set API Key
+
+Provide the [API key](https://docs.newrelic.com/docs/apis/rest-api-v2/getting-started/api-keys) for your account.
+
+Command: `nr_api <key>`
+
+### Open a New Relic app
+
+Provide the name of the New Relic you want to open.
+
+Command: `nr app_name`
 
 ## License
 

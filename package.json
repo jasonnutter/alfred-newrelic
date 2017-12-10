@@ -1,6 +1,6 @@
 {
   "name": "alfred-newrelic",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Alfred workflow for opening New Relic apps",
   "license": "MIT",
   "repository": "jasonnutter/alfred-newrelic",
@@ -13,20 +13,15 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
     "lint": "eslint ."
   },
-  "files": [
-    "index.js",
-    "icon.png",
-    "info.plist"
-  ],
   "keywords": [
     "alfred",
     "workflow",
-    "alfy"
+    "alfy",
+    "newrelic"
   ],
   "dependencies": {
     "alfy": "^0.6.0"
@@ -34,8 +29,6 @@
   "devDependencies": {
     "@jasonnutter/eslint-config": "^3.0.0",
     "alfy-test": "^0.3.0",
-    "ava": "^0.18.0",
-    "eslint": "^4.12.1",
-    "xo": "^0.17.0"
+    "eslint": "^4.12.1"
   }
 }
