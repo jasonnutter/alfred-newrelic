@@ -1,3 +1,6 @@
 {
-	"extends": "@jasonnutter/eslint-config"
+	"extends": "@jasonnutter/eslint-config",
+	"globals": {
+		"Promise": true
+	}
 }
