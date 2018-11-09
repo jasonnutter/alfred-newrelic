@@ -5,19 +5,37 @@ const apiKey = alfy.config.get('API_KEY');
 const accountId = alfy.config.get('ACCOUNT_ID');
 
 if (apiKey && accountId) {
-    alfy.fetch(`https://api.newrelic.com/v2/applications.json?filter[name]=${input}`, {
-        headers: {
-            'X-Api-Key': apiKey
-        },
-        json: true
-    })
-        .then(json => {
-            const apps = json.applications.map(app => ({
-                title: app.name,
-                subtitle: `Language: ${app.language} | ID: ${app.id}`,
+	Promise.all([
+		alfy.fetch(`https://api.newrelic.com/v2/applications.json?filter[name]=${input}`, {
+			headers: {
+				'X-Api-Key': apiKey
+			},
+			json: true
+		}),
+		alfy.fetch(`https://api.newrelic.com/v2/browser_applications.json?filter[name]=${input}`, {
+			headers: {
+				'X-Api-Key': apiKey
+			},
+			json: true
+		})
+	])
+        .then(([ apm, browser ]) => {
+            const apmApps = apm.applications.map(app => ({
+                title: `${app.name} (APM)`,
+                subtitle: `ID: ${app.id} | Language: ${app.language}`,
                 arg: `https://rpm.newrelic.com/accounts/${accountId}/applications/${app.id}`
-            }));
-            alfy.output(apps);
+			}));
+
+            const browserApps = browser.browser_applications.map(app => ({
+                title: `${app.name} (Browser)`,
+                subtitle: `ID: ${app.id}`,
+                arg: `https://rpm.newrelic.com/accounts/${accountId}/browser/${app.id}`
+			}));
+
+            alfy.output([
+				...apmApps,
+				...browserApps
+			]);
         });
 } else {
     const errors = [];

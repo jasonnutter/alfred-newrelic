@@ -1,6 +1,6 @@
 # alfred-newrelic [![Build Status](https://travis-ci.org/jasonnutter/alfred-newrelic.svg?branch=master)](https://travis-ci.org/jasonnutter/alfred-newrelic)
 
-> Alfred workflow for opening New Relic apps.
+> Alfred workflow for opening New Relic apps, with support for APM and Browser apps.
 
 
 ## Install
